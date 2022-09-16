@@ -47,7 +47,7 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
+//DEFAULT. WHEN SUBMIT IS CLICKED LIMITS DISPLAT TO ROASTS OF TYPE.
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
@@ -65,7 +65,12 @@ for (let i = 0; i < coffees.length; i++){
     coffeesArray.push(coffees[i].name);
 }
 
-coffeeName.onkeyup = function() {
-    let coffeeMatch = coffeesArray.filter(coffeesArray => coffeesArray === coffeeName)
-    tbody.innerHTML = coffeeMatch
+
+function tyape() {
+    const coffeeMatch = coffeesArray.filter(x => coffeesArray[x].indexOf(coffeeName) !== -1);
+    tbody.innerHTML = coffeeMatch;
+    //match all divs in tbody that match
+    //after = needs to be all divs and ps that meet criteria
 }
+
+coffeeName.addEventListener(`keyup`, tyape);
