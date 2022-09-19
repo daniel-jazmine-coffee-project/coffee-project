@@ -1,15 +1,7 @@
 header {
-    border-bottom: 1px solid lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#coffees {
-    display: flex;
-    flex-flow: column wrap;
-    align-content: space-around;
-    height: 85vh;
 }
 
 .coffee {
@@ -17,12 +9,15 @@ header {
     align-items: flex-end;
     width: 25vh;
 }
+
 section {
     margin: 0;
     padding: 0;
     width: 50%;
 }
+
 main {
+    border-top: 1px solid lightgray;
     display: flex;
     justify-content: space-between;
     margin: 0 5rem;
@@ -32,30 +27,44 @@ body {
     font-family: sans-serif;
 }
 
-label {
+label, select, input {
     width: 100%;
-
+    margin-bottom: .5em;
 }
 
-select {
-    width: 100%;
-}
-
-input {
-    width: 100%;
-}
-
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-td, th {
+#coffee-name, #coffee-name-input {
+    padding: 0;
     border: 1px solid black;
-    padding: 5px 10px;
 }
-
 
 #add-coffee {
     text-align: center;
+}
+
+#submit {
+    background-color: lavender;
+    margin-top: .5em;
+}
+
+#submit-input {
+    background-color: thistle;
+    margin-top: .5em;
+}
+
+@media screen and (max-width: 750px) {
+    #coffees {
+        display: flex;
+        flex-flow: column nowrap;
+        align-content: space-around;
+        height: 150vh;
+    }
+}
+
+@media screen and (min-width: 751px) {
+    #coffees {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: space-around;
+        height: 85vh;
+    }
 }
