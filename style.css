@@ -1,3 +1,50 @@
+header {
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#coffees {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-around;
+    height: 85vh;
+}
+
+.coffee {
+    display: flex;
+    align-items: flex-end;
+    width: 25vh;
+}
+section {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5rem;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+label {
+    width: 100%;
+
+}
+
+select {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -6,4 +53,9 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+
+
+#add-coffee {
+    text-align: center;
 }
