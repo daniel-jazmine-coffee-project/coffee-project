@@ -35,9 +35,9 @@ function renderCoffees(coffees) {
 }
 
 //reference of where to put it
-let tbody = document.querySelector('#coffees');
+let coffeeRef = document.querySelector('#coffees');
 //run the function
-tbody.innerHTML = renderCoffees(coffees).join(``);
+coffeeRef.innerHTML = renderCoffees(coffees).join(``);
 /*----------------The above renders the coffees on the page-----------------*/
 
 
@@ -58,7 +58,7 @@ function updateCoffees(e) {
         if ((coffee.roast === selectedRoast || selectedRoast === `all`) && coffee.name.toLowerCase().includes(searchName.toLowerCase())) {
             filteredCoffees.push(coffee);
         }
-        tbody.innerHTML = renderCoffees(filteredCoffees).join(``);
+        coffeeRef.innerHTML = renderCoffees(filteredCoffees).join(``);
     });
 }
 
@@ -79,7 +79,7 @@ function addNewCoffee (e){
     let html = `<div class="coffee"><h1>${coffeeNameInput.value}</h1><p>${roastSelectionInput.value}</p></div>`;
 
     htmlArray.unshift(html);
-    tbody.innerHTML = htmlArray.join(``);
+    coffeeRef.innerHTML = htmlArray.join(``);
 }
 
 submitInput.addEventListener(`click`, addNewCoffee);
